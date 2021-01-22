@@ -3,9 +3,9 @@ import { CarouselData } from './CarouselData';
 import "./CarouselStyle.scss";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const Carousel = ({ slides }) => {
+const Carousel = () => {
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const length = CarouselData.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -15,9 +15,13 @@ const Carousel = ({ slides }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if (!Array.isArray(CarouselData) || CarouselData.length <= 0) {
     return null;
   }
+
+  setTimeout(() => {
+    nextSlide()
+  }, 10000);
 
   return (
     <section className='slider'>
@@ -30,7 +34,7 @@ const Carousel = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt='travel' className='image' />
+              <img src={slide.image} alt='' className='image' />
             )}
           </div>
         );

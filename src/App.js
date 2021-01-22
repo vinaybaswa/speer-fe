@@ -3,7 +3,7 @@ import Carousel from './components/Carousel';
 import { CarouselData } from './components/CarouselData';
 
 function App() {
-  return <Carousel slides={CarouselData} />;
+  return <Carousel />;
 }
 
 export default App;
