@@ -16,14 +16,13 @@
 }
 
 .right-arrow {
-  position: absolute;
-  top: 50%;
-  right: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+  top: 1026px;
+  left: 926px;
+  width: 17px;
+  height: 17px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #FFFFFF;
+  opacity: 1;
 }
 
 .left-arrow {
@@ -46,4 +45,56 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+
+#radio1 {
+  position: absolute;
+  top: 700px;
+  left: 750px;
+  width: 17px;
+  height: 17px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #FFFFFF;
+  opacity: 1;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#radio2 {
+  position: absolute;
+  top: 700px;
+  left: 770px;
+  width: 17px;
+  height: 17px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #FFFFFF;
+  opacity: 1;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#radio3 {
+  position: absolute;
+  top: 700px;
+  left: 790px;
+  width: 17px;
+  height: 17px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #FFFFFF;
+  opacity: 1;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#contentOne {
+  top: 380px;
+  left: 262px;
+  width: 1396px;
+  height: 77px;
+  text-align: left;
+  font: normal normal bold Helvetica Neue;
+  letter-spacing: 6.5px;
+  color: #FFFFFF;
+  opacity: 1;
+  position: absolute;
 }

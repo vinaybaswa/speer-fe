@@ -1,32 +1,40 @@
 import React, { useState } from 'react';
 import { CarouselData } from './CarouselData';
 import "./CarouselStyle.scss";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
-  const length = CarouselData.length;
+  // const length = CarouselData.length;
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+  // const nextSlide = () => {
+  //   setCurrent(current === length - 1 ? 0 : current + 1);
+  // };
+
+  // let timer = setTimeout(nextSlide, 9000);
+
+  const firstSlide = () => {
+    // clearTimeout(timer)
+    setCurrent(0)
+    // timer = setTimeout(nextSlide, 10000)
   };
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+  const secondSlide = () => {
+    setCurrent(1);
   };
+
+  const thirdSlide = () => {
+    setCurrent(2);
+  };
+
 
   if (!Array.isArray(CarouselData) || CarouselData.length <= 0) {
     return null;
   }
 
-  setTimeout(() => {
-    nextSlide()
-  }, 10000);
+
 
   return (
     <section className='slider'>
-      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
       {CarouselData.map((slide, index) => {
         return (
           <div
@@ -39,6 +47,10 @@ const Carousel = () => {
           </div>
         );
       })}
+      <h1 id='contentOne'>INTERACTIVE CONCERT EXPERIENCE</h1>
+      <input type="radio" id="radio1" onClick={firstSlide} checked={current === 0 ? true : false} />
+      <input type="radio" id="radio2" onClick={secondSlide} checked={current === 1 ? true : false} />
+      <input type="radio" id="radio3" onClick={thirdSlide} checked={current === 2 ? true : false} />
     </section>
   );
 };
